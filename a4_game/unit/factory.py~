@@ -1,0 +1,7 @@
+from unit.static_unit import StaticUnit
+import unit, helper, effects
+from tiles import Tile
+import pygame
+
+class Facrory(StaticUnit)
+

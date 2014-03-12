@@ -11,7 +11,7 @@ __all__ = ['base_unit',
            'carrier',
            'artillery',
            'turret',
-           #include factory when complete,
+           'factory',
            'fighter',
            'anti_air',
            'bomber']
