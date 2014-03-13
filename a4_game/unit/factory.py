@@ -66,10 +66,10 @@ class Factory(StaticUnit):
         self.turn_state = [True, False]
         return True
 
-    def build_jeep(self):
+    def build_footman(self):
         if self.ready_to_build(self.tile_pos):
-            #builds the jeep
-            new_unit = unit.unit_types['Jeep'](team = self.team, 
+            #readies the footman
+            new_unit = unit.unit_types['Footman'](team = self.team, 
                                                tile_x = self.tile_pos[0],
                                                tile_y = self.tile_pos[1] + 1,
                                                activate = True,

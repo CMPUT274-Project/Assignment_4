@@ -207,16 +207,12 @@ class GUI(LayeredUpdates):
         # unselect unit
         self.sel_unit = None
 
-	# builds a jeep.
+	# builds a new unit
         for unit in base_unit.BaseUnit.active_units:
             if unit.type == 'Factory':
-                # STUCK HERE. WORK HERE
-                # STUCK HERE. WORK HERE
-                new_unit = factory.Factory.build_jeep(unit)
+                new_unit = factory.Factory.build_footman(unit)
                 if (new_unit != None):
                     self.update_unit_rect(new_unit)
-                # STUCK HERE. WORK HERE
-                # STUCK HERE. WORK HERE
 
         # Reset the turn states of all units
         for unit in base_unit.BaseUnit.active_units:
