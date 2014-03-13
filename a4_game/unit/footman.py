@@ -28,14 +28,14 @@ class Footman(GroundUnit):
         super().__init__(**keywords)
         
         #sounds
-        self.move_sound = "JeepMove"
+        self.move_sound = "FootmanWalk"
         self.hit_sound = "MachineGunFire"
 
         #set unit specific things.
         self.type = "Footman"
         self.speed = 10
         self.max_atk_range = 2
-        self.damage = 3
+        self.damage = 4
         self.defense = 1
         self.hit_effect = effects.Ricochet
         

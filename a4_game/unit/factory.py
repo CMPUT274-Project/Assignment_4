@@ -11,7 +11,7 @@ import sys, pygame
 class Factory(StaticUnit):
     """
     A factory. While it provides no actual damage,
-    it spawns a jeep at the beginning of every turn. 
+    it spawns a footman at the beginning of every turn. 
     Possessing high defenses, it is difficult to take down. However, when 
     surrounded, it can be destroyed with ease.
     
@@ -22,8 +22,8 @@ class Factory(StaticUnit):
 
     Other notes:
     - Placed near the centre of the base.
-    - Spawns a jeep on top of the unit at the beginning of every turn, 
-      unless the jeep of the previous day has not yet moved.
+    - Spawns a footman at the beginning of every turn, 
+      unless the footman of the previous day has not yet moved.
     """
     sprite = pygame.image.load("assets/factory.png")
 
@@ -43,7 +43,7 @@ class Factory(StaticUnit):
         self.speed = 0
         self.max_atk_range = 0
         self.damage = 0
-        self.defense = 1
+        self.defense = 3
         self.hit_effect = effects.Explosion
         self.turn_state = [True, False]
 

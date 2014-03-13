@@ -207,10 +207,12 @@ class GUI(LayeredUpdates):
         # unselect unit
         self.sel_unit = None
 
-	# builds a new unit
+	# builds a new footman.
         for unit in base_unit.BaseUnit.active_units:
             if unit.type == 'Factory':
+                # searches the units still alive for a factory.
                 new_unit = factory.Factory.build_footman(unit)
+                # goes through the original function to create footman.
                 if (new_unit != None):
                     self.update_unit_rect(new_unit)
 

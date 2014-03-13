@@ -25,4 +25,5 @@ class StaticUnit(BaseUnit):
         Returns True if the unit is still alive, and False otherwise.
         """
         self.turn_state = [True, False]
+        # ensures that the movement button is disabled.
         return True

@@ -210,7 +210,7 @@ class GUI(LayeredUpdates):
 	# builds a new unit
         for unit in base_unit.BaseUnit.active_units:
             if unit.type == 'Factory':
-                new_unit = factory.Factory.build_jeep(unit)
+                new_unit = factory.Factory.build_footman(unit)
                 if (new_unit != None):
                     self.update_unit_rect(new_unit)
 
