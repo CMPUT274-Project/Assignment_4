@@ -78,6 +78,7 @@ class GUI(LayeredUpdates):
             
     # These functions need to be defined ahead of __init__ because
     # they're passed as references in the buttons.
+
     def can_move(self):
         """
         Checks whether the move button can be pressed.
@@ -205,6 +206,9 @@ class GUI(LayeredUpdates):
         
         # unselect unit
         self.sel_unit = None
+
+	# builds a jeep.
+	factory.build_jeep(self)
         
         # Reset the turn states of all units
         for unit in base_unit.BaseUnit.active_units:

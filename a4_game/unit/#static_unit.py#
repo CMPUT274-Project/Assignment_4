@@ -19,10 +19,3 @@ class StaticUnit(BaseUnit):
     def is_passable(self, tile, pos):
         return False
 
-    def turn_ended(self):
-        """
-        Called when the turn for this unit's team has ended.
-        Returns True if the unit is still alive, and False otherwise.
-        """
-        self.turn_state = [True, False]
-        return True

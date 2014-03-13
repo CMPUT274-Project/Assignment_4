@@ -40,5 +40,10 @@ class Turret(StaticUnit):
         self.damage = 7
         self.defense = 1
         self.hit_effect = effects.Explosion
+        self.turn_state = [True, False]
+
+    def turn_ended(self):
+        self.turn_state = [True, False]
+        return True
 
 unit.unit_types["Turret"] = Turret

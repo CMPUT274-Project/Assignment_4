@@ -203,30 +203,21 @@ class GUI(LayeredUpdates):
         
         # reset game mode
         self.change_mode(Modes.Select)
-
-        # select the factory - if it is open, SPAWN jeep on top.
-        # Design logic: find the value of the local turret.
-        # If the turret exists, continue.
-        # If the turret does not have a unit on top of it, continue.
-        # Place the jeep on top of the factory.
-        # Thought: make the factory a tile?
-
-        # Possibly relevant code:
-        #  if not unit_name in unit.unit_types:
-        #        raise Exception("No unit of name {} found!".format(unit_name))
-        #    new_unit = unit.unit_types[unit_name](team = unit_team,
-        #                                          tile_x = unit_x,
-        #                                          tile_y = unit_y,
-        #                                          activate = True,
-        #                                          angle = unit_angle)
-        #                                          
-            
-            # Add the unit to the update group and set its display rect
-            self.update_unit_rect(new_unit)
-
+        
         # unselect unit
         self.sel_unit = None
-        
+
+	# builds a jeep.
+        for unit in base_unit.BaseUnit.active_units:
+            if unit.type == 'Factory':
+                # STUCK HERE. WORK HERE
+                # STUCK HERE. WORK HERE
+                new_unit = factory.Factory.build_jeep(unit)
+                if (new_unit != None):
+                    self.update_unit_rect(new_unit)
+                # STUCK HERE. WORK HERE
+                # STUCK HERE. WORK HERE
+
         # Reset the turn states of all units
         for unit in base_unit.BaseUnit.active_units:
             # This is the current team's unit, so call its turn end function

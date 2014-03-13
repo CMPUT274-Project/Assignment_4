@@ -6,8 +6,8 @@ import pygame
 class StaticUnit(BaseUnit):
     """
     The basic static unit.
-    
     - Does not move.
+
     """
     def __init__(self, **keywords):
         #load the base class
@@ -15,6 +15,9 @@ class StaticUnit(BaseUnit):
 
         #set unit specific things.
         self.type = "Static unit"
+	
+	#initialises the super class.
+        super().__init__()
 
     def is_passable(self, tile, pos):
         return False
